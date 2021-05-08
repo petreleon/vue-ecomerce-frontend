@@ -18,8 +18,8 @@
     </b-collapse>
   </b-navbar>
   <b-button v-b-modal.login-modal>Launch demo modal</b-button>
-  <router-link to="/product">Go to Foo</router-link>
-  <router-link to="/user">Go to Bar</router-link>
+  <router-link to="/product">Product</router-link>
+  <router-link to="/user">User</router-link>
     <!-- use router-link component for navigation. -->
     <!-- specify the link by passing the `to` prop. -->
     <!-- `<router-link>` will be rendered as an `<a>` tag by default -->

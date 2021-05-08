@@ -7,7 +7,19 @@ export default new class recommendation {
     getRatingsFromUser(user){
         return axios.get(CONSTANTS.RATING,  { params: { user:user } })
     }
-    getARating(user){
+    getARating(user, product){
+        return axios.get(CONSTANTS.RATING,  { params: { product:product, user:user } })
+    }
+    createOrModifyRating(rating){
+        return axios.post(CONSTANTS.RATING, rating)
+    }
+    deleteRatingsByProduct(product){
+        return axios.delete(CONSTANTS.RATING,  { params: { product:product } })
+    }
+    deleteRatingsByUser(user){
+        return axios.get(CONSTANTS.RATING,  { params: { user:user } })
+    }
+    deleteARating(user, product){
         return axios.get(CONSTANTS.RATING,  { params: { product:product, user:user } })
     }
 }
