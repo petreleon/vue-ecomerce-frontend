@@ -1,15 +1,18 @@
 <template>
 <div>
   <p>user ID {{$route.query.ID === undefined}}</p>
-  <p>{{list_of_recommendations}}</p>
-  <p>{{list_of_ratings}}</p>
+  <recommendations :recommendations="list_of_recommendations"/>
+  <ratingsDisplay :ratings="list_of_ratings"/>
 </div>
 </template>
 
 <script>
 import recommendation from '../services/recommendation'
 import ratings from '../services/ratings'
+import recommendations from './recommendations.vue'
+import RatingsDisplay from './ratings_display.vue'
 export default {
+  components: { recommendations, RatingsDisplay },
     name:'user',
     data:function (){
       return{

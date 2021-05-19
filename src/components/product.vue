@@ -1,15 +1,18 @@
 <template>
 <div>
   <p>product ID {{$route.query.ID}}</p>
-  <p>{{list_of_ratings}}</p>
-  <p>{{list_of_recommendations}}</p>
+  <recommendations :recommendations="list_of_recommendations"/>
+  <ratingsDisplay :ratings="list_of_ratings"/>
 </div>
 </template>
 
 <script>
 import recommendation from '../services/recommendation'
 import ratings from '../services/ratings'
+import recommendations from './recommendations.vue'
+import ratingsDisplay from './ratings_display.vue'
 export default {
+  components: { recommendations, ratingsDisplay },
     name:'product',
     data:function (){
       return{

@@ -13,6 +13,7 @@
 
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
+
         <b-button v-b-modal.login-modal>Sign Out</b-button>
       </b-navbar-nav>
     </b-collapse>
@@ -32,10 +33,16 @@
 </template>
 
 <script>
-
+import Login from './services/login'
 export default {
   name: 'App',
   components: {
+  },
+  data() {
+    return {
+      name: Login,
+      nameState: null
+    }
   }
 }
 </script>
