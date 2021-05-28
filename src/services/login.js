@@ -8,4 +8,7 @@ export default new class login {
     logout(){
         this.login = '';
     }
+    isLoggedIn(){
+        return this.login !== '';
+    }
 }

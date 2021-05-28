@@ -1,7 +1,5 @@
 <template>
 <div>
-  {{ratings}}
-  <br/>
   <b-table striped hover :items="ratings" :fields="fields">
     <template #cell(user)="data">
         <a :href="'/#/user?ID='+data.item.user">{{ data.item.user }}</a>
